@@ -63,7 +63,7 @@
     "location": {
       "@type": "Place",
       "name": "Rumah (dekat kuburan)",
-      "address": "Jalan Banta Bantaeng LR 2"
+      "address": "Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135"
     },
     "organizer": {"@type":"Person","name":"Akhmad Fujeri & Yuliana Karim"}
   }
@@ -111,7 +111,7 @@
 
       <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
         <span class="pill">31 Agustus 2025</span>
-        <span class="pill">Jalan Banta Bantaeng LR 2 (Rumah dekat kuburan)</span>
+        <span class="pill">Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135 (Rumah dekat kuburan)</span>
         <span class="pill">Dresscode: Sopan &amp; Rapi</span>
       </div>
 
@@ -158,11 +158,11 @@
           <ul class="muted" style="line-height:1.9">
             <li><strong>Tanggal:</strong> Ahad, 31 Agustus 2025</li>
             <li><strong>Waktu:</strong> Menyusul (TBA)</li>
-            <li><strong>Tempat:</strong> Jalan Banta Bantaeng LR 2 (Rumah dekat kuburan)</li>
+            <li><strong>Tempat:</strong> Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135 (Rumah dekat kuburan)</li>
           </ul>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
             <button class="btn btn-primary" onclick="openMaps()">Buka di Google Maps</button>
-            <button class="btn btn-ghost" onclick="copyText('Jalan Banta Bantaeng LR 2 (Rumah dekat kuburan)')">Salin Alamat</button>
+            <button class="btn btn-ghost" onclick="copyText('Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135 (Rumah dekat kuburan)')">Salin Alamat</button>
           </div>
         </div>
 
@@ -292,7 +292,7 @@
     }
 
     function openMaps(){
-      const q = encodeURIComponent('Jalan Banta Bantaeng LR 2, rumah dekat kuburan');
+      const q = encodeURIComponent('Rumah kost fajar, Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135');
       window.open(`https://www.google.com/maps/search/?api=1&query=${q}`, '_blank');
     }
 
@@ -308,7 +308,7 @@
 
     function addToCalendar(){
       const dtStart = '20250831'; // all-day
-      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Undangan Khitan & Aqiqah//ID\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nBEGIN:VEVENT\nUID:${Date.now()}@undangan.local\nDTSTAMP:${formatICSDateUTC(new Date())}\nDTSTART;VALUE=DATE:${dtStart}\nDTEND;VALUE=DATE:20250901\nSUMMARY:Khitan & Aqiqah — Maula, Marsya & Raya\nLOCATION:Jalan Banta Bantaeng LR 2 (Rumah dekat kuburan)\nDESCRIPTION:Acara Khitan & Aqiqah. Hormat kami: Akhmad Fujeri & Yuliana Karim.\nEND:VEVENT\nEND:VCALENDAR`;
+      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Undangan Khitan & Aqiqah//ID\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nBEGIN:VEVENT\nUID:${Date.now()}@undangan.local\nDTSTAMP:${formatICSDateUTC(new Date())}\nDTSTART;VALUE=DATE:${dtStart}\nDTEND;VALUE=DATE:20250901\nSUMMARY:Khitan & Aqiqah — Maula, Marsya & Raya\nLOCATION:Jl. Banta Bantaeng Lrg. 2, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90135\nDESCRIPTION:Acara Khitan & Aqiqah. Hormat kami: Akhmad Fujeri & Yuliana Karim.\nEND:VEVENT\nEND:VCALENDAR`;
       const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a'); a.href=url; a.download='Undangan-Khitan-Aqiqah-31-Agustus-2025.ics';
